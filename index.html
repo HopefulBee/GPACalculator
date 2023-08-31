@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="gpa-box">
+        <h2>GPA Calculator</h2>
+        <div id="courses-list">
+            <form class="key-0">
+                <strong> <label id="course-row" for="courses"> Courses</label></strong>
+                <strong> <label id="course-row" for="courses"> Credit Units </label></strong>
+                <strong> <label id="course-row" for="courses"> Grades </label></strong>
+                
+                <!-- For Courses List -->
+                <input type="text" placeholder="Course Code" class="courses key-0" required/>
+                <!-- For Credit Unit -->
+                <input type="number" class="credit-unit key-0" placeholder="Credit Units" value="" required/>
+                <!-- For the Grades -->
+                <select class="grade key-0" required>
+                    <option class="grade" value="select"> Select </option>
+                        <option class="grade" value="5"> A </option>
+                        <option class="grade" value="4"> B </option>
+                        <option class="grade" value="3"> C </option>
+                        <option class="grade" value="1"> D </option>
+                        <option class="grade" value="0"> F </option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Buttons to add, remove courses -->
+        <div class="btn">
+            <button onclick="addCourse()"> Add Course </button>
+            <button onclick="removeCourse()"> Remove Course </button>
+            <!-- To calculate cgpa -->
+            <button onclick="calcGpa()"> Calculate GPA </button>
+        </div>
+
+        <!-- Write CGPA result -->
+        <div class="result">
+            <p id="gpa-calc"> Your GPA is: </p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
